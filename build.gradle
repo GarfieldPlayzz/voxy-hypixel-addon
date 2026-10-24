@@ -8,12 +8,12 @@ defaultTasks 'build'
 
 // --- VOXY DEPENDENCY RESOLVER & VERSION CONFIG ---
 // Agents/Contributors: Update TARGET_VOXY_VERSION when bumping Voxy dependency version.
-def TARGET_VOXY_VERSION = "0.2.18"
+def TARGET_VOXY_VERSION = "0.2.20"
 def voxyVersionSuffix = TARGET_VOXY_VERSION.substring(TARGET_VOXY_VERSION.lastIndexOf('.') + 1)
 
 // Define target Minecraft versions here. 
 // If multiple versions are specified, any non-identical characters across the strings will be replaced by 'x'
-def TARGET_MINECRAFT_VERSIONS = ["26.1.2", "26.2"]
+def TARGET_MINECRAFT_VERSIONS = ["26.1.2", "26.2", "26.3"]
 
 def determineTargetMcVersion(List<String> versions) {
     if (!versions) return project.minecraft_version
